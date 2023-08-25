@@ -206,17 +206,15 @@ void Eratosthenes_prime( int result[], int limit )
 
 void a4( void )
 {
-    int result[1000] = { 0 };
-    int *pos = result;
-    int limit = 11;
 #ifdef LIMIT_FOR_PRIME
-    limit = LIMIT_FOR_PRIME;
+    int result[LIMIT_FOR_PRIME] = { 0 };
+    int limit = LIMIT_FOR_PRIME;
+#else
+    int result[1000] = { 0 };
+    int limit = 11;
 #endif
-    if( limit > 1000 )
-    {
-        printf( "limit is too large\n" );
-        return;
-    }
+    int *pos = result;
+    
     printf( "limit =  %d\n", limit );
     
     Eratosthenes_prime( result, limit );
@@ -305,17 +303,15 @@ void Eratosthenes_prime_bit( int result[], int limit )
 
 void a5( void )
 {
-    int result[1000] = { 0 };
-    int *pos = result;
-    int limit = 11;
 #ifdef LIMIT_FOR_PRIME
-    limit = LIMIT_FOR_PRIME;
-#endif 
-    if( limit > 1000 )
-    {
-        printf( "limit is too large\n" );
-        return;
-    }
+    int result[LIMIT_FOR_PRIME] = { 0 };
+    int limit = LIMIT_FOR_PRIME;
+#else
+    int result[1000] = { 0 };
+    int limit = 11;
+#endif
+    int *pos = result;
+    
     printf( "limit =  %d\n", limit );
     
     Eratosthenes_prime_bit( result, limit );
