@@ -1,5 +1,4 @@
-#include <stdarg.h>
-#include <stdio.h>
+#include "a.h"
 
 int array_offset( int array_info[], ... )
 {
@@ -51,7 +50,7 @@ struct {
     { 6, 3, 1 },
 };
 
-int main( void )
+void a6( void )
 {
     int array_info[] = { 3, 4, 6, 1, 5, -3, 3 };
     int i;
@@ -60,6 +59,4 @@ int main( void )
         printf( "%d, %d, %d -> %d\n", test[i].x, test[i].y, test[i].z, 
             array_offset( array_info, test[i].x, test[i].y, test[i].z ) );
     }
-
-    return 0;
 }

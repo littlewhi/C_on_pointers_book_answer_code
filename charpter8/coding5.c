@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "a.h" 
 
 void matrix_multiply( int *m1, int *m2, int *r, int x, int y, int z )
 {
@@ -17,7 +17,7 @@ void matrix_multiply( int *m1, int *m2, int *r, int x, int y, int z )
     }
 }
 
-int main( void )
+void a5( void )
 {
     int m1[][2] = { 
         { 2, -6 },
@@ -39,5 +39,4 @@ int main( void )
         }
         puts("");
     }
-    return 0;
 }
