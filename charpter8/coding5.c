@@ -1,6 +1,6 @@
 #include "a.h" 
 
-void matrix_multiply( int *m1, int *m2, int *r, int x, int y, int z )
+static void matrix_multiply( int *m1, int *m2, int *r, int x, int y, int z )
 {
     int i, j, k;
     for( i = 0; i < x; ++i )

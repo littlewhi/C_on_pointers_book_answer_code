@@ -1,6 +1,6 @@
 #include "a.h"
 
-int array_offset( int array_info[], ... )
+static int array_offset( int array_info[], ... )
 {
     int dimensions = array_info[0];
     int lows[11], highs[11], args[10];
@@ -49,7 +49,7 @@ int array_offset( int array_info[], ... )
     return loc;
 }
 
-struct {
+static struct {
     int x, y, z;
 }tests[10] = {
     { 4, 1, -3 },
