@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
+#include "a.h"
 
 /* 
  * va_start(va_list ap, last) : iniiialize the list
@@ -81,7 +79,7 @@ int myprintf( const char *format, ...)
     return cnt;
 }
 
-int main( void )
+void a5( void )
 {
     int cnt1, cnt2;
     cnt1 = printf( "I am a %s %d %f %c\n", "bigman", 100, 3.14, 'a' );
@@ -95,5 +93,4 @@ int main( void )
     {
         printf( "cnt1 = %d, cnt2 = %d\n", cnt1, cnt2 );
     }
-    return 0;
 }

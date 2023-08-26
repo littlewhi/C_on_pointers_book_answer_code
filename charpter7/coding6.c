@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "a.h"
 
 #define MILLION (unsigned int) (1e6)
 #define THOUSAND (unsigned int) (1000)
@@ -7,14 +6,14 @@
 #define TEN (unsigned int) (10)
 #define ONE (unsigned int) (1)
 /* 0 - 19*/
-const char *word_to_num_under[] = {
+static const char *word_to_num_under[] = {
     "ZERO",    "ONE",     "TWO",       "THREE",    "FOUR",
     "FIVE",    "SIX",     "SEVEN",     "EIGHT",    "NINE",
     "TEN",     "ELEVEN",  "TWELVE",    "THIRTEEN", "FOURTEEN",
     "FIFTEEN", "SIXTEEN", "SEVENTEEN", "EIGHTEEN", "NINETEEN",
 };
 /*20, 30, 40, ..., 90 */
-const char *word_to_num_top[] = {
+static const char *word_to_num_top[] = {
     "TWENTY", "THIRTY",  "FORTY",  "FIFTY",
     "SIXTY",  "SEVENTY", "EIGHTY", "NINETY",
 };
@@ -25,7 +24,7 @@ const char *word_to_num_top[] = {
  * so you need insure the buffer's space is enough.
  * note ： the most unit is million(10 ^ 6)
  */
-void written_amount( unsigned int amount, char *buffer )
+static void written_amount( unsigned int amount, char *buffer )
 {
     int div;
     /* check if there is number in million unit */
@@ -74,12 +73,11 @@ void written_amount( unsigned int amount, char *buffer )
     }
 }
 
-int main( void )
+void a6( void )
 {
     char buffer[1024] = "";
-    written_amount( 16312, buffer );
-
+    int amount = 16132;
+    written_amount( amount, buffer );
+    printf( "amount = %d\n", amount );
     puts(buffer);
-
-    return 0;
 }
