@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "a.h"
 
-int main( void )
+void a3( void )
 {
     int ch;
     signed char checksum = -1;
@@ -10,6 +10,4 @@ int main( void )
     }
 
     printf( "%d\n", checksum );
-
-    return 0;
 }

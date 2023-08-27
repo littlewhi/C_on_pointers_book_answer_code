@@ -1,5 +1,15 @@
 CC := gcc
-ARG := -Werror
+OPTION := -Werror
+BEHIND := 
 
-%: %.c
-	$(CC) -o $@ $<
+test: main.o coding1.o	\
+	coding2.o \
+	coding3.o \
+	coding4.o 
+	$(CC) $(OPTION) -o test $^ $(BEHIND)
+
+%.o: %.c
+	$(CC) $(OPTION) -c -o $@ $^
+
+clean:
+	rm *.o test

@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "a.h"
 #define CONTROL_SPACE 1024
 
 #if 0
@@ -39,7 +37,7 @@ int main(void)
  * 2. 使用fflush()函数，
  * 3. 程序结束（正常结束，如果是错误导致中断停止，往往不会刷新，调试时可以每个语句加上fflush()）
  */
-int main(void)
+void a2(void)
 {
     int line = 0;
     int begin = 1;
@@ -59,6 +57,4 @@ int main(void)
             begin = 1;
         }
     }
-
-    return 0;
 }

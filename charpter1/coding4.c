@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+#include "a.h"
 
-int main( void )
+void a4( void )
 {
     char cbuf[1024], nbuf[1024];
     int clen = 0, nlen;
@@ -16,7 +15,4 @@ int main( void )
     }
 
     puts( cbuf );
-
-    return 0;
-
 }
