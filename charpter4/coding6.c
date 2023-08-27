@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "a.h"
 
 int substr( char dst[], char src[], int start, int len )
 {
@@ -31,7 +30,7 @@ int substr( char dst[], char src[], int start, int len )
     
 }
 
-int main( void )
+void a6( void )
 {
     char src[512] = "hello world!";
     char dst[512];
@@ -40,5 +39,4 @@ int main( void )
     printf( "src = %s\n", src );
     printf( "dst = %s\n", dst );
 
-    return 0;
 }

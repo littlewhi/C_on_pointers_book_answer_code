@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "a.h"
 
 void copy_n( char dst[], char src[], int n )
 {
@@ -13,7 +12,7 @@ void copy_n( char dst[], char src[], int n )
         *dst = '\0';
 }
 
-int main( void )
+void a4( void )
 {
     char s[40] = "hello";
     char d[40] = "world";
@@ -23,6 +22,4 @@ int main( void )
     
     copy_n( d, s, strlen( s ) );
     printf( "dst = %s\n", d );
-
-    return 0;
 }

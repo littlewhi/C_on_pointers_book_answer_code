@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "a.h"
 
 #define IS_TRIANGLE( x, y, z ) \
     ( (x) + (y) > (z) )
@@ -10,7 +10,7 @@ void swap( double *x, double *y )
     *y = tmp;
 }
 
-int main( void )
+void a3( void )
 {
     double a, b, c;
     double max, min, mid;
@@ -25,7 +25,7 @@ int main( void )
     if( a < 0 || b < 0 || c < 0 )
     {
         printf( "Invalid data\n" );
-        return 0;
+        return;
     }
 
     /* 排序， a>b>c */
@@ -39,7 +39,7 @@ int main( void )
     if( !( IS_TRIANGLE( c, b, a ) ) )
     {
         printf( "It is not a triangle.\n" );
-        return 0;
+        return;
     }
 
     if( a == c )        /* 最长边与最短边相等，一定是正三角 */
@@ -54,6 +54,4 @@ int main( void )
     {
         printf( "It is a normal triangle.\n" );
     }
-
-    return 0;
 }

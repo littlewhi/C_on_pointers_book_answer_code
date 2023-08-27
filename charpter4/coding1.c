@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "a.h"
 
-void approximateNumber( double x )
+double approximateNumber( double x )
 {
     double approx = 1., next = 1.;
     int cnt = 0;
@@ -13,20 +12,18 @@ void approximateNumber( double x )
         next = ( approx + x / approx ) / 2.;
     }
     while( next != approx );
-    
-    printf( "The final result is %.9lf\n", approx );
+
+    return approx;
 }
 
 /* User can select the number in command line argument */
-int main( int argc, char **argv  )
+void a1( void )
 {
-    double val = 9.0;
-    if( argc >= 2 )
-        val = strtod( argv[1], NULL );
+    double val;
+    printf( "Please enter a float number for calculation:\n" );
+    scanf( "%lf", &val );    
 
     printf( "This is what I will calculate : %.9lf\n", val );
-
-    approximateNumber( val );
-
-    return 0;
+    
+    printf( "The final result is %.9lf\n", approximateNumber( val ) );
 }

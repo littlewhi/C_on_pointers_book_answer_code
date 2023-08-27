@@ -1,7 +1,6 @@
-#include <string.h>
-#include <stdio.h>
+#include "a.h"
 
-int main( void )
+void a5( void )
 {
     char pbuf[256], cbuf[256];
     int isPrint = 0;
@@ -23,6 +22,4 @@ int main( void )
 
     if( isPrint == 1 )
         printf( "%s", pbuf );
-
-    return 0;
 }

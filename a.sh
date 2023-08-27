@@ -1,9 +1,9 @@
 
-dir='charpter1 charpter2 charpter3 charpter4 charpter5 charpter6'
+dir='charpter1 charpter2 charpter4 charpter5 charpter6'
 
 for d in $dir
 do
-    cd d
+    cd $d
     touch main.c
     cat ../template_code > main.c
     touch a.h

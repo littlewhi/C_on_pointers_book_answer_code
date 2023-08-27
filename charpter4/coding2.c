@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <math.h>
+#include "a.h"
 
 int isPrime( int val )
 {
@@ -19,7 +18,7 @@ int isPrime( int val )
     return 1;
 }
 
-int main( void )
+void a2( void )
 {
     int i;
     for( i = 1; i < 100; ++i )
@@ -30,6 +29,4 @@ int main( void )
         }
     }
     puts( "" );
-
-    return 0;
 }

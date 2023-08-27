@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "a.h"
 
 int fill_bit( int num )
 {
@@ -27,9 +27,7 @@ int store_bit_field( int original_value, int value_to_store, unsigned int starti
     return original_value; 
 }
 
-int main( void )
+void a5( void )
 {
     printf( "%x\n", store_bit_field( 0xffff, 0x123, 13, 9 ) );
-
-    return 0;
 }

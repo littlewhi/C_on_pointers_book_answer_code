@@ -1,10 +1,10 @@
-
+#include "a.h"
 /* 
  * set the bit on bit_number to one
  */
 void set_bit( char bit_array[], unsigned int bit_number )
 {
-    bit_array[bit_number] = 1;
+    bit_array[bit_number / 8] |= ( 1 << ( bit_number % 8 ) );
 }
 
 /*
@@ -12,7 +12,7 @@ void set_bit( char bit_array[], unsigned int bit_number )
  */
 void clear_bit( char bit_array[], unsigned int bit_number )
 {
-    bit_array[bit_number] = 0;
+    bit_array[bit_number / 8] &= ~( 1 << ( bit_number % 8 ) );
 }
 
 /*
@@ -20,7 +20,10 @@ void clear_bit( char bit_array[], unsigned int bit_number )
  */
 void assign_bit( char bit_array[], unsigned int bit_number, int value )
 {
-    bit_array[bit_number] = value ? 1 : 0;
+    if( value )
+        set_bit( bit_array, bit_number );
+    else
+        clear_bit( bit_array, bit_number );
 }
 
 /*
@@ -28,14 +31,14 @@ void assign_bit( char bit_array[], unsigned int bit_number, int value )
  */
 int test_bit( char bit_array[], unsigned int bit_number )
 {
-    return bit_array[bit_number] ? 1 : 0;
+    return bit_array[bit_number / 8] & ( 1 << ( bit_number % 8 ) ) ? 1 : 0;
 }
+
 
 #define ARRAY_SIZE 32
 
-int main( void )
+void a4( void )
 {
     char ba[ARRAY_SIZE];
-    
-    return 0;
+
 }

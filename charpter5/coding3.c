@@ -1,5 +1,5 @@
 
-#include <stdio.h>
+#include "a.h"
 #if 0
 void setBit( unsigned int *val, int bit, int pos )
 {
@@ -49,8 +49,7 @@ unsigned int reverse_bits( unsigned int value )
 }
 
 
-int main( void )
+void a3( void )
 {
     printf( "%u\n ", reverse_bits( 25 ) );
-    return 0;
 }
