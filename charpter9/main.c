@@ -12,26 +12,41 @@ int main( int argc, char **argv )
     
     switch( argv[1][0] )
     {
-        case '1':
-            a1();
-            break;
-        case '2':
-            a2();
-            break;
-        case '3':
-            a3();
-            break;
-        case '4':
-            a4();
-            break;
-        case '5':
-            a5();
-            break;
-        case '6':
-            a6();
-            break;
-        default:
-            puts( "Unkonwn option" );
-            break;
-    }
+		case '7':
+			a7();
+			break;
+		case '8':
+			a8();
+			break;
+		case '9':
+			a9();
+			break;
+		case '10':
+			a10();
+			break;
+		case '11':
+			a11();
+			break;
+		case '12':
+			a12();
+			break;
+		case '13':
+			a13();
+			break;
+		case '14':
+			a14();
+			break;
+		case '15':
+			a15();
+			break;
+		case '16':
+			a16();
+			break;
+		case '17':
+			a17();
+			break;
+		default:
+			puts( "Unkonw options" );
+			break;
+	}
 }

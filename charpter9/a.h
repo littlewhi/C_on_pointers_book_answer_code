@@ -19,4 +19,21 @@ void a6( void );
 void a7( void );
 void a8( void );
 
+#endif#ifndef _A_H_
+#define _A_H_
+
+#include <stdio.h>
+
+void a7( void );
+void a8( void );
+void a9( void );
+void a10( void );
+void a11( void );
+void a12( void );
+void a13( void );
+void a14( void );
+void a15( void );
+void a16( void );
+void a17( void );
+
 #endif
