@@ -1,7 +1,16 @@
 #include "a.h"
 
+typedef void( *fp )( void );
+static const fp func_table[] = {
+	NULL, a1, a2, 
+	a3, a4, a5
+};
+
+static const int ft_size = sizeof( func_table ) / sizeof( func_table[0] );
+
 int main( int argc, char **argv )
 {
+    int sw, size;
     if( argc != 2 )
     {
         printf( "Usage: %s <OPTION>\n", argv[0] );
@@ -10,25 +19,9 @@ int main( int argc, char **argv )
         return -1;
     }
     
-    switch( argv[1][0] )
-    {
-        case '1':
-            a1();
-            break;
-        case '2':
-            a2();
-            break;
-        case '3':
-            a3();
-            break;
-        case '4':
-            a4();
-            break;
-        case '5':
-            a5();
-            break;
-        default:
-            puts( "Unkonwn option" );
-            break;
-    }
+    sw = atoi( argv[1] );
+    if( sw <= 0 || sw >= ft_size )
+        puts( "Unknown option" );
+    
+    func_table[sw]();
 }

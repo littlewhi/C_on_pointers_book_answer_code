@@ -10,6 +10,7 @@
 #include <stdarg.h>
 #include <ctype.h>
 #include <limits.h>
+#include <stdlib.h>
 
 void a1( void );
 void a2( void );

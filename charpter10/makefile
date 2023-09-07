@@ -13,6 +13,5 @@ clean:
 test: main.o \
 	coding1.o\
 	coding2.o\
-	coding3.o\
-	coding4.o
+	coding3.o
 	$(CC) $(OPTION) -o test $^ $(BEHIND)

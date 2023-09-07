@@ -18,14 +18,6 @@ void a5( void );
 void a6( void );
 void a7( void );
 void a8( void );
-
-#endif#ifndef _A_H_
-#define _A_H_
-
-#include <stdio.h>
-
-void a7( void );
-void a8( void );
 void a9( void );
 void a10( void );
 void a11( void );

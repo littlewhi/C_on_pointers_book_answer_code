@@ -3,11 +3,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 void a1( void );
 void a2( void );
 void a3( void );
-void a4( void );
 
 #endif
