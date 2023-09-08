@@ -49,6 +49,7 @@ void show_all_node( Llist list )
     while( list )
     {
         printf("%d\n", list->item );
+        fflush( stdout );
         list = list->next;
     }
 }
