@@ -5,7 +5,7 @@ BEHIND :=
 all: test
 
 %.o: %.c
-	$(CC) $(OPTION) -c -o $@ $^
+	$(CC) $(OPTION) -c -o $@ $^ -g
 
 clean:
 	rm *.o test
