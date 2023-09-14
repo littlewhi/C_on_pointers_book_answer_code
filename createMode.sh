@@ -14,7 +14,7 @@ then
     return
 fi
 
-rootdir='/home/book/gitrepo/c_on_pointers_ac'
+rootdir='/home/book/gitrepo/p_on_c'
 if [ -d $1 ]
 then
     echo "destation directory is $1"
