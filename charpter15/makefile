@@ -1,5 +1,5 @@
 CC := gcc
-OPTION := -Werror
+OPTION := -Werror -g
 BEHIND := 
 
 all: test
