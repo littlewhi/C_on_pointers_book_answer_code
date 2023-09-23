@@ -1,6 +1,6 @@
 CC := gcc
 OPTION := -Werror -g
-BEHIND := 
+BEHIND := -lm 
 
 all: test
 
